@@ -1,0 +1,77 @@
+@import "./variables";
+@import "./functions";
+
+
+#mainCont {
+  display: flex;
+}
+
+#mainBodyCol {
+  flex-basis: 80%;
+  display: flex;
+
+  #cardCont {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+ 
+    .card-1 {
+      margin-right: 20px;
+      flex: 1;
+
+      .card {
+        background: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        text-decoration: none;
+        color: #444;
+        transition: all 0.1s ease-in;
+        height: 50%;
+
+        article {
+          padding: 20px;
+          display: flex;
+          flex: 1;
+          justify-content: space-between;
+          flex-direction: column;
+        }
+      }
+
+      // box-sizing: border-box;
+    }
+  }
+}
+
+#sideBarCont {
+  background: $sideBarColor;
+  display: flex;
+  text-align: center;
+  flex-basis: 15%;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  height: 100vh;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    li {
+      margin-bottom: 20px;
+      a {
+        color: $sideBarText;
+        text-decoration: none;
+        font-weight: bold;
+        &:hover {
+          color: white !important;
+        }
+      }
+    }
+  }
+}
